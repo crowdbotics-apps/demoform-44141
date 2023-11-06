@@ -12,7 +12,7 @@ const WelcomeScreen = () => {
           
         </View>
         
-      <View style={styles.gSUFIpxl}><TextInput style={styles.bKDHXgCg} value="Enter Name" clearTextOnFocus={true}></TextInput></View><View style={styles.NROyLouJ}><Text style={styles.pqdNoPOo}>{"Submit"}</Text></View></ScrollView>
+      <View style={styles.gSUFIpxl}><TextInput style={styles.bKDHXgCg} value="Enter Name" clearTextOnFocus={true} defaultValue="Enter Name" editable={true} placeholderTextColor="#e7dede"></TextInput></View><View style={styles.NROyLouJ}><Text style={styles.pqdNoPOo}>{"Submit"}</Text></View></ScrollView>
     </SafeAreaView>;
 };
 
@@ -44,10 +44,10 @@ const styles = StyleSheet.create({
     left: 44
   },
   bKDHXgCg: {
-    backgroundColor: "#ffffff",
+    backgroundColor: "#f3f5ed",
     borderColor: "#cccccc",
-    width: 250,
-    height: 59
+    width: 249,
+    height: 56
   },
   NROyLouJ: {
     height: 60,
