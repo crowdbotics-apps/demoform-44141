@@ -1,3 +1,6 @@
+import { useSelector } from "react-redux";
+import { rest_auth_registration_verify_email_create } from "../../store/demoformAPI/restAuthDetails.slice.js";
+import { useDispatch } from "react-redux";
 import { Text } from "react-native";
 import { Pressable } from "react-native";
 import { TextInput } from "react-native";
@@ -5,6 +8,17 @@ import React from "react";
 import { View, ScrollView, SafeAreaView, StyleSheet } from "react-native";
 
 const WelcomeScreen = () => {
+  const {
+    entities: personnameform
+  } = useSelector(state => state.personnameform);
+  const dispatch = useDispatch();
+
+  const onSubmit = () => {
+    dispatch(rest_auth_registration_verify_email_create({
+      personnameform
+    }));
+  };
+
   return <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollView} style={styles.HfqLNTda}>
         <View style={styles.group} />
@@ -13,7 +27,7 @@ const WelcomeScreen = () => {
           
         </View>
         
-      <View style={styles.gSUFIpxl}><TextInput style={styles.bKDHXgCg} value="Enter Name" clearTextOnFocus={true} defaultValue="Enter Name" editable={true} placeholderTextColor="#e7dede"></TextInput></View><View style={styles.NROyLouJ}><Pressable><Text style={styles.pqdNoPOo}>{"Submit"}</Text></Pressable></View></ScrollView>
+      <View style={styles.gSUFIpxl}><TextInput style={styles.bKDHXgCg} value="Enter Name" clearTextOnFocus={true} defaultValue="Enter Name" editable={true} placeholderTextColor="#e7dede"></TextInput></View><View style={styles.NROyLouJ}><Pressable onPress={onSubmit}><Text style={styles.pqdNoPOo}>{"Submit"}</Text></Pressable></View></ScrollView>
     </SafeAreaView>;
 };
 
