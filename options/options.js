@@ -1,10 +1,11 @@
 export const globalOptions = {
-  name: "demoform-44141",
-  url: "https://demoform-44141.botics.co",
-  api: "https://demoform-44141.botics.co/api/v1",
-  screenOptions: {
-    headerShown: false
-  }
+  "name": "demoform-44141",
+  "url": "https://demoform-44141.botics.co",
+  "api": "https://demoform-44141.botics.co/api/v1",
+  "screenOptions": {
+    "headerShown": false
+  },
+  "initialRoute": "welcome"
 };
 export const modulesOptions = {
   "@modules/app-menu": {
