@@ -8,26 +8,26 @@ function api_docs_schema_retrieve(payload) {
     params: { lang: payload.lang }
   })
 }
+function api_v1_demoformmodel_list(payload) {
+  return demoformAPI.get(`/api/v1/demoformmodel/`)
+}
+function api_v1_demoformmodel_create(payload) {
+  return demoformAPI.post(`/api/v1/demoformmodel/`, payload)
+}
+function api_v1_demoformmodel_retrieve(payload) {
+  return demoformAPI.get(`/api/v1/demoformmodel/${payload.id}/`)
+}
+function api_v1_demoformmodel_update(payload) {
+  return demoformAPI.put(`/api/v1/demoformmodel/${payload.id}/`, payload)
+}
+function api_v1_demoformmodel_partial_update(payload) {
+  return demoformAPI.patch(`/api/v1/demoformmodel/${payload.id}/`, payload)
+}
+function api_v1_demoformmodel_destroy(payload) {
+  return demoformAPI.delete(`/api/v1/demoformmodel/${payload.id}/`)
+}
 function api_v1_login_create(payload) {
   return demoformAPI.post(`/api/v1/login/`, payload)
-}
-function api_v1_persondatamodel_list(payload) {
-  return demoformAPI.get(`/api/v1/persondatamodel/`)
-}
-function api_v1_persondatamodel_create(payload) {
-  return demoformAPI.post(`/api/v1/persondatamodel/`, payload)
-}
-function api_v1_persondatamodel_retrieve(payload) {
-  return demoformAPI.get(`/api/v1/persondatamodel/${payload.id}/`)
-}
-function api_v1_persondatamodel_update(payload) {
-  return demoformAPI.put(`/api/v1/persondatamodel/${payload.id}/`, payload)
-}
-function api_v1_persondatamodel_partial_update(payload) {
-  return demoformAPI.patch(`/api/v1/persondatamodel/${payload.id}/`, payload)
-}
-function api_v1_persondatamodel_destroy(payload) {
-  return demoformAPI.delete(`/api/v1/persondatamodel/${payload.id}/`)
 }
 function api_v1_signup_create(payload) {
   return demoformAPI.post(`/api/v1/signup/`, payload)
@@ -67,13 +67,13 @@ function rest_auth_user_partial_update(payload) {
 }
 export const apiService = {
   api_docs_schema_retrieve,
+  api_v1_demoformmodel_list,
+  api_v1_demoformmodel_create,
+  api_v1_demoformmodel_retrieve,
+  api_v1_demoformmodel_update,
+  api_v1_demoformmodel_partial_update,
+  api_v1_demoformmodel_destroy,
   api_v1_login_create,
-  api_v1_persondatamodel_list,
-  api_v1_persondatamodel_create,
-  api_v1_persondatamodel_retrieve,
-  api_v1_persondatamodel_update,
-  api_v1_persondatamodel_partial_update,
-  api_v1_persondatamodel_destroy,
   api_v1_signup_create,
   rest_auth_login_create,
   rest_auth_logout_create,
