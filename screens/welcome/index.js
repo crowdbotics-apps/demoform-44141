@@ -31,7 +31,12 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   HfqLNTda: {
-    backgroundColor: "#fffcfc"
+    backgroundColor: "#fffcfc",
+    width: 358,
+    position: "absolute",
+    top: 0,
+    left: 0,
+    height: 304
   },
   gSUFIpxl: {
     height: 60,
