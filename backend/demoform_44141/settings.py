@@ -70,6 +70,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.sites",
     "persondatamodel",
+    "demoformmodel",
 ]
 LOCAL_APPS = [
     "home",

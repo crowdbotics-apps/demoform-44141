@@ -32,6 +32,8 @@ urlpatterns = [
     path("rest-auth/registration/account-confirm-email/<str:key>/", confirm_email),
     path("rest-auth/registration/", include("dj_rest_auth.registration.urls")),
     path("api/v1/", include("persondatamodel.api.v1.urls")),
+    path("persondatamodel/", include("persondatamodel.urls")),
+    path("api/v1/", include("demoformmodel.api.v1.urls")),
 ]
 
 admin.site.site_header = "DemoForm"
