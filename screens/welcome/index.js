@@ -1,4 +1,5 @@
 import { Text } from "react-native";
+import { Pressable } from "react-native";
 import { TextInput } from "react-native";
 import React from "react";
 import { View, ScrollView, SafeAreaView, StyleSheet } from "react-native";
@@ -12,7 +13,7 @@ const WelcomeScreen = () => {
           
         </View>
         
-      <View style={styles.gSUFIpxl}><TextInput style={styles.bKDHXgCg} value="Enter Name" clearTextOnFocus={true} defaultValue="Enter Name" editable={true} placeholderTextColor="#e7dede"></TextInput></View><View style={styles.NROyLouJ}><Text style={styles.pqdNoPOo}>{"Submit"}</Text></View></ScrollView>
+      <View style={styles.gSUFIpxl}><TextInput style={styles.bKDHXgCg} value="Enter Name" clearTextOnFocus={true} defaultValue="Enter Name" editable={true} placeholderTextColor="#e7dede"></TextInput></View><View style={styles.NROyLouJ}><Pressable><Text style={styles.pqdNoPOo}>{"Submit"}</Text></Pressable></View></ScrollView>
     </SafeAreaView>;
 };
 
